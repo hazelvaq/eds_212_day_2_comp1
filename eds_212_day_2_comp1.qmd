@@ -39,3 +39,7 @@ eval(dg_gz)
 z = seq(from = 1, to = 3, length = 20)
 eval(dg_gz)
 ```
+
+usethis::use_git()
+
+##Hello! Testing a change in this doc
