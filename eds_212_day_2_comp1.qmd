@@ -1,0 +1,41 @@
+---
+title: "eds_212_day_2_comp1"
+---
+
+## Derivatives in R
+
+Define a function with capital D(function,'with respect to variable')
+
+```{r}
+# expressions are rarely used in R
+fx <- expression(3.1*x^4 - 28*x)
+
+df_dx <- D(fx,'x')
+
+df_dx
+
+#What is the slope of the function when x = 10
+x<-10
+
+# Evaluate the derivative at x=10
+eval(df_dx)
+
+```
+
+##Practice Find the slope of g(z) = 2z^3^ -10.5z\^2 + 4.1 at z = 3.6
+
+```{r}
+gz = expression(2*(z^3) - 10.5*(z^2) +4.1)
+
+dg_gz = D(gz,'z')
+
+dg_gz
+
+z = 3.6
+eval(dg_gz)
+
+#sequence evaluate
+
+z = seq(from = 1, to = 3, length = 20)
+eval(dg_gz)
+```
